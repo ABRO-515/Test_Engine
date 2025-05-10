@@ -142,16 +142,12 @@ export default function Test() {
     // mouseConstraint.mouse.element.removeEventListener('DOMMouseScroll', mouseConstraint.mouse.mousewheel);
 
     Events.on(engine, "afterUpdate", () => {
-      userCardsRef.current.forEach((cardWrapper) => {
+      [...userCardsRef.current, ...smallCardsRef.current].forEach((cardWrapper) => {
         if (cardWrapper && cardWrapper.body) {
           const { position, angle } = cardWrapper.body;
-          cardWrapper.el.style.transform = `translate(${position.x - 150}px, ${position.y - 60}px) rotate(${angle}rad)`;
-        }
-      });
-      smallCardsRef.current.forEach((cardWrapper) => {
-        if (cardWrapper && cardWrapper.body) {
-          const { position, angle } = cardWrapper.body;
-          cardWrapper.el.style.transform = `translate(${position.x - 90}px, ${position.y - 25}px) rotate(${angle}rad)`;
+          const w = cardWrapper.el.offsetWidth;
+          const h = cardWrapper.el.offsetHeight;
+          cardWrapper.el.style.transform = `translate(${position.x - w / 2}px, ${position.y - h / 2}px) rotate(${angle}rad)`;
         }
       });
     });
@@ -223,7 +219,7 @@ export default function Test() {
             <div
               key={index}
               ref={(el) => (smallCardsRef.current[index] = { el })}
-              className={`rounded-[30px] flex gap-2 w-fit py-1 px-3 items-center ${item.color}`}
+              className={`rounded-[30px] flex gap-2 w-fit py-1 px-3 items-center ${item.color} absolute`}
             >
               <Image
                 width={500}
@@ -240,7 +236,7 @@ export default function Test() {
             <div
               key={index}
               ref={(el) => (userCardsRef.current[index] = { el })}
-              className={`md:w-[300px] w-[230px] SF-Pro-Display-Regular h-[120px] ${card.backGround} rounded-2xl shadow-md p-4 absolute top-0 left-0 flex flex-col justify-center overflow-hidden`}
+              className={`w-[300px] SF-Pro-Display-Regular h-[120px] ${card.backGround} rounded-2xl shadow-md p-4 absolute top-0 left-0 flex flex-col justify-center overflow-hidden`}
             >
               <div className="flex justify-between items-center mb-2">
                 <div className="flex">
