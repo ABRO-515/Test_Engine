@@ -13,15 +13,16 @@ const smallCards = [
 ];
 
 const userCards = [
-  { user: 'Usama Khan', backGround: 'bg-white text-black hidden md:block', time: '1h Ago · Parenting', question: 'How Can I Manage Screen Time For Kids Effectively?', image: '/profile-pictures/user1.jpg' },
-  { user: 'Abdul Hameed', backGround: 'bg-white text-black hidden md:block', time: '3h Ago · Parenting', question: 'How To Make Kids Interested In Studying Without Forcing Them?', image: '/profile-pictures/user2.jpg' },
-  { user: 'Waiz Ali', backGround: 'bg-white text-black hidden md:block ', time: '2h Ago · Deep Jugaad', question: 'How Can I Create A Balcony Garden In A Small Space?', image: '/profile-pictures/user3.jpg' },
-  { user: 'Zain Zaidi', backGround: 'bg-[#323232] text-white', time: '5h Ago · DIY', question: 'How Do I Paint My House Walls Like A Pro?', image: '/profile-pictures/user4.jpg' },
-  { user: 'Uzair Abro', backGround: 'bg-white text-black ', time: '4h Ago · Tech', question: 'How Do I Become A BlockChain Developer?', image: '/profile-pictures/user5.jpg' },
-  { user: 'Chadaray Aslam', backGround: 'bg-white text-black', time: '8h Ago · DIY', question: 'How To Pack More Items In A Small Bag?', image: '/profile-pictures/user1.jpg' },
-  { user: 'Ajay ', backGround: 'bg-white text-black hidden md:block', time: '1h Ago · Deep Jugaad', question: 'What’s the best jugaad to cool a room without an AC?', image: '/profile-pictures/user3.jpg' },
-  { user: 'M.Shahab', backGround: 'bg-[#323232] text-white hidden md:block', time: '3h Ago · Medical', question: 'What’s the best way to remove dandruff naturally?', image: '/profile-pictures/user4.jpg' },
+  { user: 'Inaya Rahman', backGround: 'bg-white text-black hidden md:block', time: '1h Ago · Parenting', question: 'What Are Fun Ways To Teach Kids Discipline Daily?', image: '/profile-pictures/user1.jpg' },
+  { user: 'Mateo Rossi', backGround: 'bg-white text-black hidden md:block', time: '3h Ago · Parenting', question: 'How Can I Help My Kids Study Without Nagging Them?', image: '/profile-pictures/user2.jpg' },
+  { user: 'Zara Al-Mansoori', backGround: 'bg-white text-black hidden md:block ', time: '2h Ago · Deep Jugaad', question: 'What’s A Clever Way To Start A Small Garden Indoors?', image: '/profile-pictures/user3.jpg' },
+  { user: 'Eli Thompson', backGround: 'bg-[#323232] text-white', time: '5h Ago · DIY', question: 'What’s The Easiest Way To Paint A Wall Smoothly?', image: '/profile-pictures/user4.jpg' },
+  { user: 'Jaxon Morales', backGround: 'bg-white text-black ', time: '4h Ago · Tech', question: 'Where Should I Start To Learn Blockchain Today?', image: '/profile-pictures/user5.jpg' },
+  { user: 'Sofia Nakamura', backGround: 'bg-white text-black', time: '8h Ago · DIY', question: 'How Can I Fit More Clothes Into My Backpack?', image: '/profile-pictures/user1.jpg' },
+  { user: 'Maya Chen ', backGround: 'bg-white text-black hidden md:block', time: '1h Ago · Deep Jugaad', question: 'What’s A Cheap Hack To Cool Down A Hot Room?', image: '/profile-pictures/user3.jpg' },
+  { user: 'Aarav Patel', backGround: 'bg-[#323232] text-white hidden md:block', time: '3h Ago · Medical', question: 'How Can I Get Rid Of Dandruff Without Shampoo?', image: '/profile-pictures/user4.jpg' },
 ];
+
 
 export default function Test() {
   const [isVisible, setIsVisible] = useState(false);
